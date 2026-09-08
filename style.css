@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Playfair+Display:ital,wght@0,600;1,600&display=swap');
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:#0b0b0b;color:#f4f1eb;font-family:'DM Sans',Arial,sans-serif}
+a{color:inherit;text-decoration:none}
+.nav{position:fixed;z-index:20;top:0;left:0;width:100%;display:flex;justify-content:space-between;align-items:center;padding:24px 5vw;mix-blend-mode:difference}
+.brand{font-size:16px;font-weight:700;letter-spacing:.16em}
+.brand span{font-weight:400}
+.nav nav{display:flex;gap:28px;font-size:12px;text-transform:uppercase;letter-spacing:.12em}
+.hero{height:100vh;min-height:650px;position:relative;overflow:hidden}
+.hero img{width:100%;height:100%;object-fit:cover;object-position:center}
+.hero-overlay{position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.7),rgba(0,0,0,.12) 70%),linear-gradient(0deg,rgba(0,0,0,.55),transparent 45%)}
+.hero-content{position:absolute;left:8vw;bottom:11vh;max-width:700px}
+.eyebrow{font-size:11px;letter-spacing:.25em;font-weight:700}
+.hero h1{font-size:clamp(60px,10vw,150px);line-height:.78;margin:24px 0;font-weight:600;letter-spacing:-.05em}
+.hero h1 em{font-family:'Playfair Display',serif;font-weight:600}
+.hero-copy{font-size:18px;max-width:430px;margin-bottom:28px}
+.button{display:inline-block;border:1px solid #f4f1eb;padding:13px 20px;text-transform:uppercase;font-size:11px;letter-spacing:.16em;transition:.25s}
+.button:hover{background:#f4f1eb;color:#0b0b0b}
+.portfolio{padding:120px 6vw}
+.section-heading{max-width:720px;margin-bottom:50px}
+.section-heading h2,.about h2,.contact h2{font-family:'Playfair Display',serif;font-size:clamp(44px,6vw,80px);line-height:.95;margin:12px 0 18px}
+.section-heading p:last-child,.contact>p{color:#aaa;max-width:580px;line-height:1.7}
+.filters{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:35px}
+.filters button{background:transparent;color:#aaa;border:1px solid #333;padding:9px 13px;font:inherit;font-size:10px;text-transform:uppercase;letter-spacing:.12em;cursor:pointer}
+.filters button.active,.filters button:hover{color:#fff;border-color:#fff}
+.gallery{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+.card{position:relative;overflow:hidden;min-height:430px;background:#151515;cursor:pointer}
+.card.tall{min-height:600px}
+.card img{width:100%;height:100%;min-height:430px;object-fit:cover;display:block;transition:transform .7s}
+.card:hover img{transform:scale(1.035)}
+.card-info{position:absolute;left:25px;bottom:22px;text-shadow:0 2px 12px #000}
+.card-info span{font-size:10px;letter-spacing:.2em}
+.card-info h3{font-family:'Playfair Display',serif;font-size:34px;margin:5px 0}
+.about{padding:110px 10vw;display:grid;grid-template-columns:1fr 1fr;gap:8vw;border-top:1px solid #222}
+.about-copy{color:#aaa;line-height:1.9;font-size:16px}
+.contact{padding:140px 10vw;background:#f0ede7;color:#111}
+.contact .eyebrow{color:#555}
+.contact>p{color:#555}
+.button.light{border-color:#111;color:#111}
+.button.light:hover{background:#111;color:#fff}
+footer{display:flex;justify-content:space-between;padding:28px 6vw;color:#777;font-size:11px;border-top:1px solid #222}
+.lightbox{display:none;position:fixed;z-index:50;inset:0;background:rgba(0,0,0,.94);align-items:center;justify-content:center;padding:40px}
+.lightbox.show{display:flex}
+.lightbox img{max-width:95%;max-height:92vh;object-fit:contain}
+.close{position:absolute;right:25px;top:18px;background:none;border:0;color:#fff;font-size:42px;cursor:pointer}
+@media(max-width:700px){
+ .nav{padding:18px 5vw}.nav nav{gap:14px}.nav nav a:nth-child(1){display:none}
+ .hero-content{left:7vw;bottom:8vh}.hero h1{font-size:68px}
+ .portfolio{padding:80px 5vw}.gallery{grid-template-columns:1fr}.card,.card.tall{min-height:520px}
+ .about{grid-template-columns:1fr;padding:80px 7vw;gap:20px}.contact{padding:90px 7vw}
+ footer{gap:10px;flex-direction:column}
+}

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Eclipse By Safat — Photography Portfolio by Imtehan Hasan Safat.">
+  <title>Eclipse By Safat — Photography Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="nav">
+    <a class="brand" href="#home">ECLIPSE <span>BY SAFAT</span></a>
+    <nav>
+      <a href="#portfolio">Portfolio</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="home" class="hero">
+      <img src="images/nature-mayabi.png" alt="Mayabi waterfall and forest">
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <p class="eyebrow">PHOTOGRAPHY PORTFOLIO</p>
+        <h1>ECLIPSE<br><em>BY SAFAT</em></h1>
+        <p class="hero-copy">Moments observed. Stories preserved.</p>
+        <a class="button" href="#portfolio">Explore the work</a>
+      </div>
+    </section>
+
+    <section id="portfolio" class="portfolio">
+      <div class="section-heading">
+        <p class="eyebrow">SELECTED WORK</p>
+        <h2>Through my lens</h2>
+        <p>Nature, people, places and quiet moments—captured from a different perspective.</p>
+      </div>
+
+      <div class="filters">
+        <button class="active" data-filter="all">All</button>
+        <button data-filter="nature">Nature</button>
+        <button data-filter="portrait">Portrait</button>
+        <button data-filter="heritage">Heritage</button>
+        <button data-filter="street">Street</button>
+        <button data-filter="travel">Travel</button>
+        <button data-filter="flower">Flower</button>
+        <button data-filter="night">Night</button>
+        <button data-filter="wildlife">Wildlife</button>
+      </div>
+
+      <div class="gallery">
+        <article class="card tall" data-category="heritage">
+          <img src="images/heritage-gitanjali.png" alt="Gitanjali heritage architecture">
+          <div class="card-info"><span>HERITAGE</span><h3>Gitanjali</h3></div>
+        </article>
+        <article class="card" data-category="travel">
+          <img src="images/travel-metropolis.png" alt="Metropolis waterscape">
+          <div class="card-info"><span>TRAVEL</span><h3>Metropolis</h3></div>
+        </article>
+        <article class="card tall" data-category="nature">
+          <img src="images/nature-mayabi.png" alt="Mayabi forest waterfall">
+          <div class="card-info"><span>NATURE</span><h3>Mayabi</h3></div>
+        </article>
+      </div>
+    </section>
+
+    <section id="about" class="about">
+      <div>
+        <p class="eyebrow">ABOUT THE PHOTOGRAPHER</p>
+        <h2>Imtehan Hasan Safat</h2>
+      </div>
+      <div class="about-copy">
+        <p>I have always found beauty in things that are often overlooked. A landscape after rain, sunlight through leaves, a quiet flower, an old structure, or a fleeting human moment can tell a story when viewed from a different perspective.</p>
+        <p>My camera is simply a way of preserving those moments before they disappear.</p>
+      </div>
+    </section>
+
+    <section id="contact" class="contact">
+      <p class="eyebrow">LET'S CONNECT</p>
+      <h2>Have a story worth capturing?</h2>
+      <p>For photography, collaboration or portfolio enquiries.</p>
+      <a class="button light" href="mailto:your-email@example.com">Get in touch</a>
+    </section>
+  </main>
+
+  <footer>
+    <span>© 2026 Eclipse By Safat</span>
+    <span>Imtehan Hasan Safat</span>
+  </footer>
+
+  <div class="lightbox" id="lightbox">
+    <button class="close" aria-label="Close">&times;</button>
+    <img id="lightbox-img" src="" alt="">
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
