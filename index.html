@@ -6,21 +6,30 @@
   <title>Eclipse by Safat</title>
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { background-color: #0d0d0d; color: #ffffff; font-family: 'Helvetica Neue', Arial, sans-serif; padding: 40px 20px; }
-    header { display: flex; justify-content: space-between; align-items: center; max-width: 1100px; margin: 0 auto 60px auto; }
+    body { background-color: #0d0d0d; color: #ffffff; font-family: 'Helvetica Neue', Arial, sans-serif; padding: 20px; }
+    header { display: flex; justify-content: space-between; align-items: center; max-width: 1100px; margin: 0 auto 30px auto; }
     .logo { font-weight: bold; letter-spacing: 2px; font-size: 1.1rem; }
     nav a { color: #888; text-decoration: none; margin-left: 20px; font-size: 0.85rem; letter-spacing: 1px; }
     nav a:hover { color: #fff; }
+
+    /* Top Cover Image */
+    .hero-container { max-width: 1100px; margin: 0 auto 40px auto; border-radius: 8px; overflow: hidden; max-height: 480px; }
+    .hero-container img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
     .portfolio-section { max-width: 1100px; margin: 0 auto; }
     .section-subtitle { font-size: 0.75rem; letter-spacing: 2px; color: #888; margin-bottom: 15px; text-transform: uppercase; }
-    .section-title { font-size: 3rem; font-family: serif; font-weight: normal; margin-bottom: 15px; }
-    .section-desc { color: #aaa; max-width: 500px; margin-bottom: 40px; line-height: 1.5; font-size: 0.95rem; }
+    .section-title { font-size: 2.8rem; font-family: serif; font-weight: normal; margin-bottom: 15px; }
+    .section-desc { color: #aaa; max-width: 500px; margin-bottom: 30px; line-height: 1.5; font-size: 0.95rem; }
+
+    /* Filter Buttons */
     .filter-buttons { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 40px; }
     .filter-btn { background: transparent; color: #888; border: 1px solid #222; padding: 8px 18px; cursor: pointer; text-transform: uppercase; font-size: 0.75rem; letter-spacing: 1px; transition: all 0.3s ease; }
     .filter-btn.active, .filter-btn:hover { border-color: #ffffff; color: #ffffff; }
-    .gallery { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 25px; }
-    .gallery-item { overflow: hidden; border-radius: 4px; background-color: #1a1a1a; }
-    .gallery-item img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+    /* Gallery Grid */
+    .gallery { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px; }
+    .gallery-item { overflow: hidden; border-radius: 6px; background-color: #1a1a1a; }
+    .gallery-item img { width: 100%; height: 260px; object-fit: cover; display: block; }
   </style>
 </head>
 <body>
@@ -33,6 +42,11 @@
     </nav>
   </header>
 
+  <!-- Top Hero / Cover Image -->
+  <div class="hero-container">
+    <img src="Fashion Model Casual Magazine Cover.png" alt="Header Cover">
+  </div>
+
   <section class="portfolio-section" id="portfolio">
     <div class="section-subtitle">SELECTED WORK</div>
     <h1 class="section-title">Through my lens</h1>
@@ -41,36 +55,32 @@
     <!-- Filter Buttons -->
     <div class="filter-buttons">
       <button class="filter-btn active" data-filter="all">ALL</button>
-      <button class="filter-btn" data-filter="nature">NATURE</button>
-      <button class="filter-btn" data-filter="portrait">PORTRAIT</button>
+      <button class="filter-btn" data-filter="wildlife">WILDLIFE</button>
       <button class="filter-btn" data-filter="heritage">HERITAGE</button>
+      <button class="filter-btn" data-filter="nature">NATURE</button>
       <button class="filter-btn" data-filter="street">STREET</button>
       <button class="filter-btn" data-filter="travel">TRAVEL</button>
-      <button class="filter-btn" data-filter="night">NIGHT</button>
-      <button class="filter-btn" data-filter="wildlife">WILDLIFE</button>
     </div>
 
-    <!-- Gallery with Uploaded Image File Names -->
+    <!-- Correctly Categorized Gallery -->
     <div class="gallery">
-      <!-- HERITAGE -->
+      <!-- WILDLIFE (Cats) -->
+      <div class="gallery-item wildlife"><img src="BOOST.png" alt="Cat 1"></div>
+      <div class="gallery-item wildlife"><img src="IMG-20260508-WA0001.jpg" alt="Cat 2"></div>
+
+      <!-- HERITAGE (Ruppur, Kushtia & Ferris Wheel) -->
       <div class="gallery-item heritage"><img src="fe434f0c44e24de09794ddbd805de9a8.jpg" alt="Ruppur"></div>
       <div class="gallery-item heritage"><img src="heritage-gitanjali.png" alt="Kushtia"></div>
+      <div class="gallery-item heritage"><img src="Black and White Elegant Fashion Magazine Cover.png" alt="Ferris Wheel"></div>
 
-      <!-- WILDLIFE & PORTRAIT -->
-      <div class="gallery-item wildlife portrait"><img src="BOOST.png" alt="Rosy Cat"></div>
-      <div class="gallery-item wildlife portrait"><img src="IMG-20260508-WA0001.jpg" alt="Matriarch Cats"></div>
+      <!-- NATURE (Trees) -->
+      <div class="gallery-item nature"><img src="IMG-20260508-WA0139.jpg" alt="Tree Dusk"></div>
+      <div class="gallery-item nature"><img src="nature-mayabi.png" alt="Mayabi Tree"></div>
 
-      <!-- NATURE -->
-      <div class="gallery-item nature"><img src="IMG-20260508-WA0139.jpg" alt="Dusk Tree"></div>
-      <div class="gallery-item nature"><img src="nature-mayabi.png" alt="Obscure Tree"></div>
-
-      <!-- STREET & VINTAGE -->
-      <div class="gallery-item street"><img src="Black and White Elegant Fashion Magazine Cover.png" alt="Gravity Ferris Wheel"></div>
-      <div class="gallery-item street"><img src="Menswear Fashion Magazine Article Page.png" alt="Cinema Machine"></div>
-
-      <!-- TRAVEL & NIGHT -->
-      <div class="gallery-item night travel"><img src="Blue Elegant Aesthetic Travel Magazine Article Cover.png" alt="Escape Moon"></div>
-      <div class="gallery-item travel"><img src="White and Black Minimalist Travel Magazine Article Page.png" alt="Journey Boat"></div>
+      <!-- STREET & TRAVEL -->
+      <div class="gallery-item street"><img src="Menswear Fashion Magazine Article Page.png" alt="Cinema"></div>
+      <div class="gallery-item travel"><img src="Blue Elegant Aesthetic Travel Magazine Article Cover.png" alt="Travel Moon"></div>
+      <div class="gallery-item travel"><img src="White and Black Minimalist Travel Magazine Article Page.png" alt="Travel Boat"></div>
     </div>
   </section>
 
