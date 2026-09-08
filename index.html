@@ -3,95 +3,99 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Eclipse By Safat — Photography Portfolio by Imtehan Hasan Safat.">
-  <title>Eclipse By Safat — Photography Portfolio</title>
-  <link rel="stylesheet" href="style.css">
+  <title>Eclipse by Safat</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { background-color: #0d0d0d; color: #ffffff; font-family: 'Helvetica Neue', Arial, sans-serif; padding: 40px 20px; }
+    header { display: flex; justify-content: space-between; align-items: center; max-width: 1100px; margin: 0 auto 60px auto; }
+    .logo { font-weight: bold; letter-spacing: 2px; font-size: 1.1rem; }
+    nav a { color: #888; text-decoration: none; margin-left: 20px; font-size: 0.85rem; letter-spacing: 1px; }
+    nav a:hover { color: #fff; }
+    .portfolio-section { max-width: 1100px; margin: 0 auto; }
+    .section-subtitle { font-size: 0.75rem; letter-spacing: 2px; color: #888; margin-bottom: 15px; text-transform: uppercase; }
+    .section-title { font-size: 3rem; font-family: serif; font-weight: normal; margin-bottom: 15px; }
+    .section-desc { color: #aaa; max-width: 500px; margin-bottom: 40px; line-height: 1.5; font-size: 0.95rem; }
+    .filter-buttons { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 40px; }
+    .filter-btn { background: transparent; color: #888; border: 1px solid #222; padding: 8px 18px; cursor: pointer; text-transform: uppercase; font-size: 0.75rem; letter-spacing: 1px; transition: all 0.3s ease; }
+    .filter-btn.active, .filter-btn:hover { border-color: #ffffff; color: #ffffff; }
+    .gallery { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 25px; }
+    .gallery-item { overflow: hidden; border-radius: 4px; background-color: #1a1a1a; }
+    .gallery-item img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  </style>
 </head>
 <body>
-  <header class="nav">
-    <a class="brand" href="#home">ECLIPSE <span>BY SAFAT</span></a>
+
+  <header>
+    <div class="logo">ECLIPSE BY SAFAT</div>
     <nav>
-      <a href="#portfolio">Portfolio</a>
-      <a href="#about">About</a>
-      <a href="#contact">Contact</a>
+      <a href="#about">ABOUT</a>
+      <a href="#contact">CONTACT</a>
     </nav>
   </header>
 
-  <main>
-    <section id="home" class="hero">
-      <img src="nature-mayabi.png" alt="Mayabi waterfall and forest">
-      <div class="hero-overlay"></div>
-      <div class="hero-content">
-        <p class="eyebrow">PHOTOGRAPHY PORTFOLIO</p>
-        <h1>ECLIPSE<br><em>BY SAFAT</em></h1>
-        <p class="hero-copy">Moments observed. Stories preserved.</p>
-        <a class="button" href="#portfolio">Explore the work</a>
-      </div>
-    </section>
+  <section class="portfolio-section" id="portfolio">
+    <div class="section-subtitle">SELECTED WORK</div>
+    <h1 class="section-title">Through my lens</h1>
+    <p class="section-desc">Nature, people, places and quiet moments—captured from a different perspective.</p>
 
-    <section id="portfolio" class="portfolio">
-      <div class="section-heading">
-        <p class="eyebrow">SELECTED WORK</p>
-        <h2>Through my lens</h2>
-        <p>Nature, people, places and quiet moments—captured from a different perspective.</p>
-      </div>
+    <!-- Filter Buttons -->
+    <div class="filter-buttons">
+      <button class="filter-btn active" data-filter="all">ALL</button>
+      <button class="filter-btn" data-filter="nature">NATURE</button>
+      <button class="filter-btn" data-filter="portrait">PORTRAIT</button>
+      <button class="filter-btn" data-filter="heritage">HERITAGE</button>
+      <button class="filter-btn" data-filter="street">STREET</button>
+      <button class="filter-btn" data-filter="travel">TRAVEL</button>
+      <button class="filter-btn" data-filter="night">NIGHT</button>
+      <button class="filter-btn" data-filter="wildlife">WILDLIFE</button>
+    </div>
 
-      <div class="filters">
-        <button class="active" data-filter="all">All</button>
-        <button data-filter="nature">Nature</button>
-        <button data-filter="portrait">Portrait</button>
-        <button data-filter="heritage">Heritage</button>
-        <button data-filter="street">Street</button>
-        <button data-filter="travel">Travel</button>
-        <button data-filter="flower">Flower</button>
-        <button data-filter="night">Night</button>
-        <button data-filter="wildlife">Wildlife</button>
-      </div>
+    <!-- Gallery with Uploaded Image File Names -->
+    <div class="gallery">
+      <!-- HERITAGE -->
+      <div class="gallery-item heritage"><img src="fe434f0c44e24de09794ddbd805de9a8.jpg" alt="Ruppur"></div>
+      <div class="gallery-item heritage"><img src="heritage-gitanjali.png" alt="Kushtia"></div>
 
-      <div class="gallery">
-        <article class="card tall" data-category="heritage">
-          <img src="heritage-gitanjali.png" alt="Gitanjali heritage architecture">
-          <div class="card-info"><span>HERITAGE</span><h3>Gitanjali</h3></div>
-        </article>
-        <article class="card" data-category="travel">
-          <img src= alt=
-          <div class="card-info"><span>TRAVEL</span><h3></h3></div>
-        </article>
-        <article class="card tall" data-category="nature">
-          <img src="nature-mayabi.png" alt="Mayabi forest waterfall">
-          <div class="card-info"><span>NATURE</span><h3>Mayabi</h3></div>
-        </article>
-      </div>
-    </section>
+      <!-- WILDLIFE & PORTRAIT -->
+      <div class="gallery-item wildlife portrait"><img src="BOOST.png" alt="Rosy Cat"></div>
+      <div class="gallery-item wildlife portrait"><img src="IMG-20260508-WA0001.jpg" alt="Matriarch Cats"></div>
 
-    <section id="about" class="about">
-      <div>
-        <p class="eyebrow">ABOUT THE PHOTOGRAPHER</p>
-        <h2>Imtehan Hasan Safat</h2>
-      </div>
-      <div class="about-copy">
-        <p>I have always found beauty in things that are often overlooked. A landscape after rain, sunlight through leaves, a quiet flower, an old structure, or a fleeting human moment can tell a story when viewed from a different perspective.</p>
-        <p>My camera is simply a way of preserving those moments before they disappear.</p>
-      </div>
-    </section>
+      <!-- NATURE -->
+      <div class="gallery-item nature"><img src="IMG-20260508-WA0139.jpg" alt="Dusk Tree"></div>
+      <div class="gallery-item nature"><img src="nature-mayabi.png" alt="Obscure Tree"></div>
 
-    <section id="contact" class="contact">
-      <p class="eyebrow">LET'S CONNECT</p>
-      <h2>Have a story worth capturing?</h2>
-      <p>For photography, collaboration or portfolio enquiries.</p>
-      <a class="button light" href="mailto:your-email@example.com">Get in touch</a>
-    </section>
-  </main>
+      <!-- STREET & VINTAGE -->
+      <div class="gallery-item street"><img src="Black and White Elegant Fashion Magazine Cover.png" alt="Gravity Ferris Wheel"></div>
+      <div class="gallery-item street"><img src="Menswear Fashion Magazine Article Page.png" alt="Cinema Machine"></div>
 
-  <footer>
-    <span>© 2026 Eclipse By Safat</span>
-    <span>Imtehan Hasan Safat</span>
-  </footer>
+      <!-- TRAVEL & NIGHT -->
+      <div class="gallery-item night travel"><img src="Blue Elegant Aesthetic Travel Magazine Article Cover.png" alt="Escape Moon"></div>
+      <div class="gallery-item travel"><img src="White and Black Minimalist Travel Magazine Article Page.png" alt="Journey Boat"></div>
+    </div>
+  </section>
 
-  <div class="lightbox" id="lightbox">
-    <button class="close" aria-label="Close">&times;</button>
-    <img id="lightbox-img" src="" alt="">
-  </div>
-  <script src="script.js"></script>
+  <!-- Filter Functionality -->
+  <script>
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const galleryItems = document.querySelectorAll('.gallery-item');
+
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filterBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+
+        const filterValue = btn.getAttribute('data-filter');
+
+        galleryItems.forEach(item => {
+          if (filterValue === 'all' || item.classList.contains(filterValue)) {
+            item.style.display = 'block';
+          } else {
+            item.style.display = 'none';
+          }
+        });
+      });
+    });
+  </script>
+
 </body>
 </html>
